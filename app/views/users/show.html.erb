@@ -2,3 +2,32 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td>メールアドレス</td>
+      <td><%= @user.email %></td>
+    </tr>
+    <tr>
+      <td>地域</td>
+      <td><%= @user.location %></td>
+    </tr>
+    <tr>
+      <td>URL</td>
+      <td><%= @user.URL %></td>
+    </tr>
+    <tr>
+      <td>自己紹介</td>
+      <td><%= @user.introduction %></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div align="center">
+  <%= link_to "Settings", edit_user_path(current_user) %>
+</div>
