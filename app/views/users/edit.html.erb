@@ -11,25 +11,25 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: 'form-control'%>
 
       <%= f.label :email %>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: 'form-control' %>
 
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
       
       <%= f.label :location %>
-      <%= f.text_field :location %>
+      <%= f.text_field :location, class: 'form-control' %>
 
       <%= f.label :URL %>
-      <%= f.text_field :URL %>
+      <%= f.text_field :URL, class: 'form-control' %>
 
       <%= f.label :introduction %>
-      <%= f.text_area :introduction %> 
+      <%= f.text_area :introduction, class: 'form-control' %> 
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
