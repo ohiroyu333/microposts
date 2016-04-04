@@ -19,12 +19,14 @@
   </aside>
   <div class="col-md-8">
     <h1 style="text-align:left">Followers</h1>
-      <ul class="users follow">
-        <%= gravatar_for @user %>
-        <% @user.follower_users.each do |user| %>
-          <h3><%= user.name %></h3>
-          <span><%= link_to "view this profile", user_path(user) %></span>
-        <% end %>
-      </ul>
+      <% @user.follower_users.each do |user| %>
+      <table>
+        <tr>
+          <td><%= link_to gravatar_for(user, size: 50), user %></td>
+          <td><h3><%= user.name %></h3></td>
+          <td><%= link_to 'view this profile', user_path(user) %></td>
+        </tr>
+      </table>
+      <% end %>
   </div>
 </div>
